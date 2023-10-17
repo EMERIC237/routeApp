@@ -1,0 +1,46 @@
+$base-font-family: 'Arial', sans-serif;
+$base-padding: 1rem;
+$nav-border-color: #e1e1e1;
+$nav-link-color: #666;
+$nav-link-hover-color: #333;
+$nav-link-active-color: #007bff;
+$nav-link-spacing: 0.5rem;
+
+div {
+  font-family: $base-font-family;
+
+  nav {
+    display: flex;
+    justify-content: start;
+    border-bottom: 1px solid $nav-border-color;
+    padding-bottom: $base-padding / 2;
+
+    a {
+      margin-right: $nav-link-spacing;
+      padding: $base-padding / 2 $base-padding;
+      text-decoration: none;
+      color: $nav-link-color;
+      border-radius: 4px;
+      transition: background-color 0.3s ease, color 0.2s ease;
+
+      &.active {
+        color: $nav-link-active-color;
+        background-color: rgba($nav-link-active-color, 0.1);
+      }
+
+      &:hover {
+        color: $nav-link-hover-color;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+main {
+  padding: $base-padding;
+
+  router-outlet+* {}
+}

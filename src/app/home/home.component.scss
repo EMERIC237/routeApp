@@ -1,0 +1,33 @@
+$base-padding: 1rem;
+$base-color: #655555;
+$hover-color: #000;
+$border-color: #ccc;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $base-padding 0;
+  border-bottom: 1px solid $border-color;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  nav {
+    a {
+      margin: 0 0.5rem;
+      color: $base-color;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        color: $hover-color;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
